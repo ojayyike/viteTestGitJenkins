@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    
+
+    stages {
+        stage('Run App Tests') {
+            steps {
+                sh '''
+                    CI=true npm run test
+                   '''
+            }
+    }
+    triggers {
+        pollSCM('') //Empty quotes tells it to build on a push
+    }
+}
