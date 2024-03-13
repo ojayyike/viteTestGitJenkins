@@ -13,7 +13,7 @@ pipeline {
         stage('Run App Tests') {
             steps {
                 sh '''
-                    node --version
+                    npm i 
                     CI=true npm run test
                    '''
             }
