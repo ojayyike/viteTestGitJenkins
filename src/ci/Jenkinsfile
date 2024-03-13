@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    
 
     stages {
         stage('Run App Tests') {
@@ -12,5 +11,6 @@ pipeline {
     }
     triggers {
         pollSCM('') //Empty quotes tells it to build on a push
+    }
     }
 }
