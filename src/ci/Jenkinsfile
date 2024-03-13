@@ -4,6 +4,7 @@ pipeline {
         docker { 
             image 'node:20.11.1-alpine3.19'
             registryUrl 'https://hub.docker.com/'
+            label docker-agent
 
              }
     }
