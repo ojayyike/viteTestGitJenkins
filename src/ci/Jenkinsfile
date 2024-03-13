@@ -1,8 +1,12 @@
 pipeline {
-    agent docker-agent
-    // agent {
-    //     docker { image 'node:20.11.1-alpine3.19' }
-    // }
+    // agent docker-agent
+    agent {
+        docker { 
+            image 'node:20.11.1-alpine3.19'
+            registryUrl 'https://hub.docker.com/'
+
+             }
+    }
 
     stages {
         stage('Run App Tests') {
