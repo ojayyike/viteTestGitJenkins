@@ -22,7 +22,7 @@ export default Accessibility = () => {
     }
     return (
         <div className="accessibility-btn">
-            <button ref={buttonRef} onFocus={handleFocus} onBlur={handleBlur} tabIndex={isFocused ? 1 : 0} onKeyDown={handleKeyDown} onClick={() => { console.log("Button was clicked") }}>Click Me</button>
+            <button aria-label="Click Me Button" ref={buttonRef} onFocus={handleFocus} onBlur={handleBlur} tabIndex={isFocused ? 1 : 0} onKeyDown={handleKeyDown} onClick={() => { console.log("Button was clicked") }}>Click Me</button>
         </div>
     )
 }

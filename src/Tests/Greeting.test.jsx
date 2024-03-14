@@ -27,6 +27,7 @@ describe('Greeting component', () => {
         //Assert
         const outputElement = screen.getByText(/It is great to see you!/i)
         expect(outputElement).toBeInTheDocument();
+
     })
 
     test('renders Welome to react when button clicked', async () => {

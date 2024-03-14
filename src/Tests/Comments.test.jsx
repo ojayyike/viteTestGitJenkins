@@ -1,6 +1,7 @@
 import { render, waitFor, screen } from "@testing-library/react";
 import axios from "axios";
 import Comments from "../components/Comments";
+import {expect, jest, test} from '@jest/globals'
 
 jest.mock("axios");
 
@@ -30,5 +31,6 @@ describe("Comments", () => {
     const comments = await waitFor(() => screen.getAllByTestId("comments"));
 
     expect(comments).toHaveLength(2);
+  
   });
 });
