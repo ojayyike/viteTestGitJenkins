@@ -14,6 +14,7 @@ describe('Greeting component', () => {
         //Assert
         const helloWorldElement = screen.getByText(/hello world/i)
         expect(helloWorldElement).toBeInTheDocument();
+
     })
 
     test('renders great to see you when button NOT clicked', () => {
@@ -43,10 +44,6 @@ describe('Greeting component', () => {
     test('does not render good to see you when button is clicked',async () => {
         //Arrange
         render(<Greeting />);
- 
-        //act (perform the main action)
-        // const user = userEvent.setup();
-        // await user.click(screen.getByTestId('greeting-btn'));
 
         await fireEvent.click(screen.getByTestId('greeting-btn'))
 

@@ -11,8 +11,8 @@ function App() {
 
   return (
     <>
-      {/* <Greeting />  */}
-      <Comments />
+      <Greeting /> 
+      {/* <Comments /> */}
     </>
   )
 }
