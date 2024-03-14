@@ -22,7 +22,15 @@ export default Accessibility = () => {
     }
     return (
         <div className="accessibility-btn">
-            <button aria-label="Click Me Button" ref={buttonRef} onFocus={handleFocus} onBlur={handleBlur} tabIndex={isFocused ? 1 : 0} onKeyDown={handleKeyDown} onClick={() => { console.log("Button was clicked") }}>Click Me</button>
+            {/* <button aria-label="Click Me Button" ref={buttonRef} onFocus={handleFocus} onBlur={handleBlur} tabIndex={isFocused ? 1 : 0} onKeyDown={handleKeyDown} onClick={() => { console.log("Button was clicked") }}>Click Me</button> */}
+
+            <h5>First name</h5>
+            <input name="firstName" type="text" placeholder="Enter your first name" />
+            <h5>Gender</h5>
+            Male <input aria-label="Male radio button" type="radio" name="gender" value="Male" />
+            Female <input aria-label="Female radio button" type="radio" name="gender" value="Female" />
+
+            <button>Click Me</button>
         </div>
     )
 }
